@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:paddingBottom="40dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcherapplogo_foreground" />
 
         <TextView
             android:layout_width="wrap_content"

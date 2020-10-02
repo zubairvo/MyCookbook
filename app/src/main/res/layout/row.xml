@@ -178,6 +178,17 @@
 
                 android:src="@drawable/ic_baseline_delete_forever_24" />
 
+            <Button
+                android:id="@+id/viewRecipeBtn"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@id/RecName"
+                android:layout_alignTop="@id/RecName"
+                android:layout_below="@id/RecImage"
+                android:layout_toLeftOf="@+id/deleteRecipeBtn"
+                android:text="View"
+ />s
+
 
 
             <ImageButton

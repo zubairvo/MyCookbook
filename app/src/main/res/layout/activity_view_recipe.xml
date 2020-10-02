@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:fillViewport="true"
     android:padding="16dp"
-    tools:context=".UpdateRecipeActivity">
+    tools:context=".ViewRecipe">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
 
             />
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/recipeName"
@@ -44,7 +44,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/roundedtextbox"/>
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:id="@+id/ingredients"
@@ -55,7 +55,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/roundedtextbox"/>
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:id="@+id/recipeDirections"
@@ -69,11 +69,11 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/AddRecipeBtn"
+            android:id="@+id/backBtn"
             android:layout_below="@id/recipeDirections"
             android:layout_centerHorizontal="true"
             android:padding="10dp"
-            android:text="Add New Recipe"
+            android:text="Back To List"
             android:textColor="@color/White"
             android:backgroundTint="@color/colorAccent"
             android:textStyle="bold"
