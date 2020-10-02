@@ -78,18 +78,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if (cursor.moveToNext()){
             do{
-                 RecipeModel model = new RecipeModel(
-                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
-                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_IMAGE)),
-                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_RECIPE_NAME)),
-                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_INGREDIENTS)),
-                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_DIRECTIONS)),
-                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_CREATED)),
-                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODIFIED))
+                RecipeModel model = new RecipeModel(
+                        ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_IMAGE)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_RECIPE_NAME)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_INGREDIENTS)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_DIRECTIONS)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_CREATED)),
+                        ""+cursor.getString(cursor.getColumnIndex(Constants.C_MODIFIED))
 
-                 );
+                );
 
-                 arrayList.add(model);
+                arrayList.add(model);
 
             } while (cursor.moveToNext());
         }
