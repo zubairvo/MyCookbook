@@ -11,23 +11,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/recipeHeading"
-            android:text="Update Recipe"
-            android:gravity="center_horizontal"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/Black"
 
-            />
         <ImageView
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="130dp"
             android:id="@+id/recipeImage"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/recipeHeading"
             android:padding="2dp"
             android:src="@drawable/ic_baseline_add_a_photo_24"
 

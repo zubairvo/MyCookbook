@@ -73,7 +73,7 @@
             android:layout_below="@id/recipeDirections"
             android:layout_centerHorizontal="true"
             android:padding="10dp"
-            android:text="Add New Recipe"
+            android:text="Update Recipe"
             android:textColor="@color/White"
             android:backgroundTint="@color/colorAccent"
             android:textStyle="bold"

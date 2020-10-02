@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseHelper dbHelper;
     Button viewRecipe;
+    ImageView image;
+    TextView recipeName, ingredients, directions;
 
 
 
@@ -35,13 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         dbHelper = new DatabaseHelper(this);
-        viewRecipe = findViewById(R.id.viewRecipeBtn);
 
         showRecipe();
-
-
-
-
 
         fab = findViewById(R.id.addFButton);
 
@@ -55,20 +54,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        viewRecipe.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, ViewRecipe.class);
-//                intent.putExtra("ViewRecipe", false);
-//                startActivity(intent);
-//            }
-//        });
+
     }
 
     private void showRecipe() {
 
         Adapter adapter = new Adapter(MainActivity.this, dbHelper.getAllData(Constants.C_CREATED + " DESC"));
         recyclerView.setAdapter(adapter);
+
+
     }
 
     @Override

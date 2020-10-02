@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 import mycookbook.com.MainActivity;
 import mycookbook.com.R;
 import mycookbook.com.UpdateRecipeActivity;
+import mycookbook.com.ViewRecipe;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
 
@@ -85,17 +87,37 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
             }
         });
 
-//        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//
-//                deleteDialog(
-//                        ""+id
-//                );
-//
-//                return false;
-//            }
-//        });
+        holder.ViewRecipe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               viewRecipeDetails(
+                       ""+image,
+                       ""+name,
+                       ""+ingredients,
+                       ""+directions,
+                       ""+created,
+                       ""+modified
+               );
+            }
+        });
+
+
+
+    }
+
+    private void viewRecipeDetails( final String image, final String name, final String ingredients, final String directions, final String created, final String modified) {
+
+
+        Intent intent = new Intent(context, ViewRecipe.class);
+        intent.putExtra("RECIPE_NAME", name);
+        intent.putExtra("IMAGE", image);
+        intent.putExtra("INGREDIENTS", ingredients);
+        intent.putExtra("DIRECTIONS", directions);
+        intent.putExtra("CREATED", created);
+        intent.putExtra("MODIFIED", modified);
+        intent.putExtra("EditRecipe", true);
+        context.startActivity(intent);
+
 
 
     }
@@ -175,6 +197,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
         TextView recName;
         ImageButton editRecipe;
         ImageButton deleteRecipe;
+        Button ViewRecipe;
 
         public Holder(@NonNull View itemView) {
             super(itemView);
@@ -183,6 +206,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
             recName = itemView.findViewById(R.id.RecName);
             editRecipe = itemView.findViewById(R.id.editRecipeBtn);
             deleteRecipe = itemView.findViewById(R.id.deleteRecipeBtn);
+            ViewRecipe = itemView.findViewById(R.id.viewRecipeBtn);
         }
     }
 }
