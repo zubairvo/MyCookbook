@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    app:cardUseCompatPadding="true"-->
+<!--    app:contentPadding="3dp"-->
+<!--    app:cardElevation="3dp"-->
+<!--    app:cardBackgroundColor="@color/White">-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:id="@+id/RecImage"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/ic_baseline_add_a_photo_24"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_toRightOf="@id/RecImage"-->
+<!--            android:layout_toEndOf="@id/RecImage"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_marginStart="16dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/RecName"-->
+<!--                android:text="Recipe Name"-->
+<!--                android:textSize="30sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/Black"/>-->
+
+
+<!--        </LinearLayout>-->
+
+<!--    </RelativeLayout>-->
+
+
+<!--</androidx.cardview.widget.CardView>-->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/White">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/RecImage"
+        android:layout_toEndOf="@id/RecImage">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/RecImage"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/RecName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe Name"
+                android:textColor="@color/Black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <ImageButton
+        android:id="@+id/deleteRecipeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@null"
+
+        android:src="@drawable/ic_baseline_delete_forever_24" />
+
+
+
+            <ImageButton
+                android:id="@+id/editRecipeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+</LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
