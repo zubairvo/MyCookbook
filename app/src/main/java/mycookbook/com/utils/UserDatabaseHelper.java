@@ -24,7 +24,7 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
 
     // Database creation sql statement
     private String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS " +
-            TABLE_USERS + "(" + COLUMN_ID + " ONTEGER PRIMARY KEY AUTOINCREMENT, " +
+            TABLE_USERS + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             COLUMN_NAME + " text not null, " + COLUMN_EMAIL +
             " text not null, " + COLUMN_MOBILE + " integer, " +
             COLUMN_PASSWORD + " text not null);";

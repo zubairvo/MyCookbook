@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     UserDatabaseHelper dbHelper;
     String email,password;
     TextView registerLink;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

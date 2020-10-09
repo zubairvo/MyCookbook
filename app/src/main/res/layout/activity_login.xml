@@ -34,19 +34,23 @@
         android:textColor="@color/colorPrimary"
         android:textColorHint="#6E6B6B"
         android:textColorHighlight="@color/colorPrimaryDark"/>
+
     <EditText
         android:id="@+id/LPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@drawable/roundedtextbox"
-        android:hint="@string/enter_message_password"
+
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="10dp"
-        android:layout_margin="10dp"
+        android:hint="@string/enter_message_password"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="@color/colorPrimary"
-        android:textColorHint="#6E6B6B"
-        android:textColorHighlight="@color/colorPrimaryDark"/>
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textColorHint="#6E6B6B" />
+
     <Button
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
